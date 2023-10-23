@@ -113,7 +113,7 @@ export default function Game() {
         <ol>{moves}</ol>
       </div>
       {winner ? (
-        <h2>Winner is: {winner} ! Bet you can't beat skeno 😜</h2>
+        <h2>Winner is: {winner} ! Bet you cant beat skeno 😜</h2>
       ) : (
         <br></br>
       )}

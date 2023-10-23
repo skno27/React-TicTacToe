@@ -20,6 +20,21 @@ body {
   width: 34px;
 }
 
-.border-row {
+.square:hover {
+  background-color: #999;
+}
+
+.board-row {
   display: flex;
+
+}
+
+.transition-btn {
+  border: 2px solid black;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.transition-btn:hover {
+  background-color: rgba(240, 225, 195, 0.664);
 }

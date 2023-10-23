@@ -21,7 +21,7 @@ function Board({ squares, xIsNext, onPlay }) {
 
   return (
     <>
-      {console.log(winner)}
+      {/* {console.log(winner)} */}
       {winner ? (
         <p>Winner is: {winner}</p>
       ) : (
@@ -94,7 +94,9 @@ export default function Game() {
     }
     return (
       <li key={move + Math.random}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className="transition-btn" onClick={() => jumpTo(move)}>
+          {description}
+        </button>
       </li>
     );
   });

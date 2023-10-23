@@ -4,8 +4,19 @@
 
 body {
   margin: 10px;
+  background-color: antiquewhite;
 }
 
+.game {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+}
+.header {
+  margin-bottom: 20px;
+}
 .square {
   background: #fff;
   border: 1px solid #999;
@@ -21,7 +32,7 @@ body {
 }
 
 .square:hover {
-  background-color: #999;
+  background-color: #d6d6d6;
 }
 
 .board-row {
@@ -33,6 +44,12 @@ body {
   border: 2px solid black;
   border-radius: 6px;
   margin: 10px;
+}
+
+.transition-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
 }
 
 .transition-btn:hover {

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 
+let winner;
 function Square({ value, onClick }) {
   return (
     <button className="square" onClick={onClick}>
@@ -16,8 +17,7 @@ function Board({ squares, xIsNext, onPlay }) {
     newSquares[idx] = xIsNext ? "X" : "O";
     onPlay(newSquares);
   }
-
-  const winner = calculateWinner(squares);
+  winner = calculateWinner(squares);
 
   return (
     <>
@@ -93,7 +93,7 @@ export default function Game() {
       description = "Go to game start";
     }
     return (
-      <li key={move + Math.random}>
+      <li key={move + Math.random} className="transition-list">
         <button className="transition-btn" onClick={() => jumpTo(move)}>
           {description}
         </button>
@@ -103,16 +103,21 @@ export default function Game() {
 
   return (
     <div className="game">
+      <h1 className="header">
+        Tic Tac Toe for Deazja, Othello, And Azari Tenari!
+      </h1>
       <div className="game-board">
         <Board squares={currentSquares} xIsNext={xIsNext} onPlay={handlePlay} />
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
       </div>
+      {winner ? (
+        <h2>Winner is: {winner} ! Bet you can't beat skeno ;)</h2>
+      ) : (
+        <br></br>
+      )}
+      <p>by: skenoCoding</p>
     </div>
   );
 }
-
-// export default function Home() {
-//   return <div></div>;
-// }
